@@ -180,4 +180,9 @@ Lastly, pytest:
 
 The same thing should happen here as with importing flask.
 
+## Directory Structure
 
+After doing all this your directory should look something like this:
+
+.
+└── venv
