@@ -3,7 +3,7 @@
 
 #### tl;dr
 
-![alt text][product.png]
+![alt text](https://github.com/CatEars/MapApp_Part1/blob/master/product.png)
 
 
 #### What are we going to do?
