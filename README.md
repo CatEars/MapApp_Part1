@@ -34,7 +34,8 @@ little bit about how to code in python and having experience with
 HTML, CSS or JavaScript helps. If you know how to define functions,
 loop using `for`, conditional statements using `if ... elif ... else`
 you should be on a good foot. You will **not** need to know anything
-about `class` or object orientation. 
+about `class` or object orientation. I will also assume that you know
+how to navigate the command line with commands such as `cd` and `ls`.
 
 Some of the things in here can be done with a windows machine, or a
 linux with, say, arch linux installed but the tutorial is written with
@@ -70,11 +71,29 @@ and py_pet_test. Or perhaps (more likely) use django as a server.
 
 ## Installing libraries
 
+#### tl;dr
+
+`source venv/bin/activate`
+
 Often when starting up a project I get very excited and want to start
 coding immediately. However when starting from scratch like this we
 need to install a lot of things before we get to the fun stuff ;). I
 promise however that in the next part we will have a webserver up and
 running!
+
+We will be installing the libraries into the virtualenv. In order to
+do this we need to **activate** the virtual env. We do this by typing
+`source venv/bin/activate`. You should now see `(venv)` prepended to
+your command line. This means that the virtualenv is activated. To
+deactivate the virtualenv we would type `deactivate` and everything
+would be back to normal. 
+
+If we do not activate our virtualenv we will do stuff with the
+system-wide installation of python and this will require us to install
+things using `sudo`. All kudos to sudo but we want the libraries only
+to exist in the virtualenv. When running the code we will also
+**always** need to activate the virtualenv first. So make sure that
+you look for the little `(venv)` before running anything ;)
 
 ### Flask
 
@@ -86,9 +105,10 @@ running!
 
 flask is known to programmers as a micro web framework. Web framework
 means that it is a code library that gives us helpful functions to
-create something that does stuff with the web. The micro comes from
-the fact that it tries to work with minimal effort from the
-programmers side ;)
+create something that does stuff with the web (it really is that
+general, I'm not making this stuff up). The micro comes from the fact
+that it tries to work with minimal effort from the programmers
+side. Less is more =)
 
 #### Why do we use flask?
 
@@ -100,7 +120,7 @@ our purposes it works great!
 
 ### Pytest
 
-#### tl;dr 
+#### tl;dr
 
 `pip install pytest==2.8.2`
 
@@ -134,3 +154,30 @@ in python. =)
 
 
 ### Testing that everything is installed
+
+Here are some commands to run to make sure that everything is
+installed correctly.
+
+`python --version`
+
+should print something like `Python 3.4.0` or perhaps `Python 3.5.2`
+
+If it prints `python 2.7.6` or something similar you should make sure
+that you have activated the virtualenv, if not you will have to remove
+the virtualenv `rm -rf venv` and create a new virtualenv. Make sure
+that you add `--python=/usr/bin/python3`
+
+Next up: flask
+
+`python -c 'import flask'`
+
+This should just run withou any output. If you see an `ImportError`
+flask is not properly installed.
+
+Lastly, pytest:
+
+`python -c 'import pytest'`
+
+The same thing should happen here as with importing flask.
+
+
