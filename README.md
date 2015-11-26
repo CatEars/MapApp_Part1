@@ -9,11 +9,15 @@
 #### What are we going to do?
 
 This is a project about creating a map application that can show the
-shortest path from a --> b for users. We will also run it through a
-webserver so we will learn a little bit about hosting webpages and
-running a server. The project will mostly be written in python but
-there will be some HTML, CSS and JavaScript involved. If you are doing
-anything on the web you cannot really avoid those three...
+shortest path from a --> b for users. The user will click two points
+on the map and then click the button. This will update the map with
+the shortest path between where the user clicked.
+
+We will run the application through a webserver so we will learn a
+little bit about hosting webpages and running a server. The project
+will mostly be written in python but there will be some HTML, CSS and
+JavaScript involved. If you are doing anything on the web you cannot
+really avoid those three...
 
 #### What are we going to ignore?
 
@@ -22,12 +26,32 @@ internet. This way we don't have to deal with any security
 issues. Registering a domain and making your page show up on the
 internet is also something that is not trivial to do.
 
+#### What you are going to need
+
+In order to do this project you need a linux machine running an OS
+similar to ubuntu with python3 installed. You also need to know a
+little bit about how to code in python and having experience with
+HTML, CSS or JavaScript helps. If you know how to define functions,
+loop using `for`, conditional statements using `if ... elif ... else`
+you should be on a good foot. You will **not** need to know anything
+about `class` or object orientation. 
+
+Some of the things in here can be done with a windows machine, or a
+linux with, say, arch linux installed but the tutorial is written with
+the above prerequisites in mind.
+
 ## Virtualenv
+
 #### tl;dr
 
-`sudo apt-get install virtualenv`
+`sudo apt-get install python-virtualenv`
 
-`virtualenv --python=/usr/bin/python3`
+`virtualenv --python=/usr/bin/python3 venv`
+
+The first command installs virtualenv on your computer and the second
+one creates a virtualenv in the directory "venv" which will be located
+in the same directory that you run the command. It will be installed
+with python3.
 
 #### What is a virtualenv?
 
@@ -44,8 +68,7 @@ flask and pytest but if you later on will be making a homepage for
 your pet you might want to use the fictional packages py_pet_server
 and py_pet_test. Or perhaps (more likely) use django as a server.
 
-
-## Installing everything
+## Installing libraries
 
 Often when starting up a project I get very excited and want to start
 coding immediately. However when starting from scratch like this we
@@ -108,3 +131,6 @@ from languages like Java and Smalltalk and in those languages you have
 different ideas of what "good code" looks like. The unittest module is
 designed to look a lot like Java code but we are writing this project
 in python. =)
+
+
+### Testing that everything is installed
