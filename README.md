@@ -3,12 +3,24 @@
 
 #### tl;dr
 
-This is what we are going to do:
-[insert picture of finished product]
+![alt text][product.png]
 
-[What are we going to do? What will the finished product look like?]
-[What are we going to ignore?]
 
+#### What are we going to do?
+
+This is a project about creating a map application that can show the
+shortest path from a --> b for users. We will also run it through a
+webserver so we will learn a little bit about hosting webpages and
+running a server. The project will mostly be written in python but
+there will be some HTML, CSS and JavaScript involved. If you are doing
+anything on the web you cannot really avoid those three...
+
+#### What are we going to ignore?
+
+We are not going to try and make this webserver available on the
+internet. This way we don't have to deal with any security
+issues. Registering a domain and making your page show up on the
+internet is also something that is not trivial to do.
 
 ## Virtualenv
 #### tl;dr
